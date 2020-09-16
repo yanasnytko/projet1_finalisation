@@ -53,7 +53,6 @@ if (isset($_SESSION["userId"]) && mb_strlen($_SESSION["userId"]) > 0) {
       <p>
         N'oubliez pas de rentrer votre mot de passe, même si vous ne le changez pas&nbsp;!
       </p>
-      </input>
       <br>
       <embed src="data:<?= $users['UserImageType'] ?>;base64,<?= base64_encode($users['UserImage']) ?>" width="200px" />
       <input type="file" name="userImage" id="userImage"> <br>
