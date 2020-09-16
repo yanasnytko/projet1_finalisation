@@ -107,11 +107,11 @@ $article = $statement->fetchAll(PDO::FETCH_ASSOC);
       </div>
     </div>
     <?php endforeach; ?>
-
-
+    <?php if (isset($_SESSION["userId"]) && mb_strlen($_SESSION["userId"]) > 0 && $_SESSION["userId"] == $userId) : ?>
     <p>
-      <?= $users['UserName'] ?>, pensez à <a href="../crudArticle/create.php">publier un nouveau article.</a>
+      <?= $_SESSION["userName"] ?>, pensez à <a href="../crudArticle/create.php">publier un nouveau article.</a>
     </p>
+    <?php endif; ?>
   </main>
 </body>
 
